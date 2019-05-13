@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');/*chèn font lato của google,bold 400,bold 700*/
+body{
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    color: #505962;
+}
+.form-control{
+    border-top-left-radius: 1.25rem!important;
+    border-top-right-radius: 1.25rem!important;
+    border-bottom-left-radius: 1.25rem!important;
+    border-bottom-right-radius: 1.25rem!important;
+    width: 300px!important;
+}
+.btn-search{
+    border-radius: 50%!important;
+}
+
