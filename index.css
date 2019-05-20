@@ -23,7 +23,15 @@ body{
     background: url("./assets/img/apple.png") no-repeat fixed center;
     z-index: -1;
 }
-.popular .dark{
+.ocean{
+    background: url("./assets/img/ocean.jpg") no-repeat fixed center;
+    z-index: -1;
+}
+.rice{
+    background: url("./assets/img/rice.jpg") no-repeat fixed center;
+    z-index: -1;
+}
+.dark{
     background-color: rgba(0, 0, 0, 0.75);
     padding: 7rem 2rem;
 }
