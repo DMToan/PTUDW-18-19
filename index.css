@@ -14,4 +14,16 @@ body{
 .btn-search{
     border-radius: 50%!important;
 }
-
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popular{
+    background: url("./assets/img/apple.png") no-repeat fixed center;
+    z-index: -1;
+}
+.popular .dark{
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 7rem 2rem;
+}
