@@ -1,0 +1,51 @@
+<%- include ../layouts/Header -%>
+    <div class="margin" style="height: 56px;"></div>
+    <h1 class="text-center">Viết Blog</h1>
+    <div class="page_content">
+        <div class="container">
+            <h3>Tựa Bài</h3>
+            <input type="text" class="form-control" placeholder="...">
+        </div>
+        <div class="container">
+            <h3>Tóm Tắt</h3>
+            <input type="text" class="form-control" placeholder="...">
+        </div>
+        <div class="container">
+            <h3>Thể Loại</h3>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>Củ Quả</option>
+                <option>Rau Xanh</option>
+                <option>Món Ngon</option>
+                <option>Tôm Cá</option>
+                <option>Cua Ốc</option>
+                <option>Món Biển</option>
+            </select>
+        </div>
+        <div class="container">
+            <h3>Thân Bài</h3>
+            <div id="toolbar"></div>
+            <div id="editor" style="min-height: 300px;"></div>
+            <button type="button" class="btn btn-primary" style="margin-top:10px;margin-bottom:10px;">Save</button>
+        </div>
+    </div>
+    <script>
+        var quill = new Quill('#editor', {
+            modules: {
+                toolbar:[
+                            ['bold','italic','underline','strike'],
+                            ['blockquote', 'code-block'],
+                            [{'header':[1,2,3,4,5,6,false]}],
+                            [{'list':'ordered'},{'list':'bullet'}],
+                            [{'script':'sub'},{'script':'super'}],
+                            [{'indent':'-1'},{'indent':'+1'}],
+                            [{'direction':'rtl'}],
+                            ['link','image','video','formula'],
+                            [{'color':[]},{'background':[]}],
+                            [{'font':[]}],
+                            [{'align':[]}]
+                        ]
+            },
+            theme: 'snow'
+        });
+    </script>
+<%- include ../layouts/Footer -%>

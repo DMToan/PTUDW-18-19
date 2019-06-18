@@ -1,0 +1,75 @@
+<%- include Fheader -%>
+        <section>
+            <div class="row">
+                <% for(var i=1; i<=10; i++){ %>
+                    <div class="col-md-6">
+                        <div class="card" style="width: 21rem;">
+                            <img src="/img/client1.png" class="card-img-top" alt="..."
+                                style="width: auto;height: 300px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                                <span class="mr-2" style="color:#1ebba3">Lifestyle</span>&bullet;
+                                <span class="mr-2 ml-2">March 15, 2018 </span> &bullet;
+                                <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                                <a href="#" class="btn btn-primary">Đọc Thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </section>
+
+    </div>
+    
+    <div class="col-lg-4">
+        <div class="sidebar" style="background: #ededed;">
+            <section class="farm">
+                <h4>Mới Nhất</h4>
+                <% for(var i=1;i<=10;i++){ %>
+                    <div class="card" style="width: auto;margin-bottom: 15px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4" style="padding: 0;">
+                                <img src="/img/client1.png" class="card-img" alt="..."
+                                    style="width:auto; height: 100px;">
+                            </div>
+                            <div class="col-md-8" style="padding: 0;">
+                                <div class="card-body" style="padding: 0;">
+                                    <h5 class="card-title" style="margin-bottom: 0;">Lorem ipsum dolor sit amet
+                                        Lorem ipsum</h5>
+                                    <span class="mr-2" style="color:#1ebba3">Lifestyle</span>&bullet;
+                                    <span class="mr-2 ml-2">March 15, 2018 </span> &bullet;
+                                    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </section>
+            <div class="dropdown-divider" style="border-top: 2px solid #a2a3a5;"></div>
+            <section class="ocean">
+                <h4>Xem Nhiều</h4>
+                <% for(var i=1;i<=10;i++){ %>
+                    <div class="card" style="width: auto;margin-bottom: 15px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4" style="padding: 0;">
+                                <img src="/img/client1.png" class="card-img" alt="..."
+                                    style="width:auto; height: 100px;">
+                            </div>
+                            <div class="col-md-8" style="padding: 0;">
+                                <div class="card-body" style="padding: 0;">
+                                    <h5 class="card-title" style="margin-bottom: 0;">Lorem ipsum dolor sit amet
+                                        Lorem ipsum</h5>
+                                    <span class="mr-2" style="color:#1ebba3">Lifestyle</span>&bullet;
+                                    <span class="mr-2 ml-2">March 15, 2018 </span> &bullet;
+                                    <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </section>
+        </div>
+    </div>
+<%- include Ffooter -%>
