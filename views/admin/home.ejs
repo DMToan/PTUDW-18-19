@@ -1,0 +1,97 @@
+<%- include Dheader -%>
+<div class="col-lg-8">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header text-center">
+                    <i class="far fa-user fa-9x"></i>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">200 - người dùng</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header text-center">
+                    <i class="fas fa-sitemap fa-9x"></i>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">6 - chuyên mục</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header text-center">
+                    <i class="far fa-newspaper fa-9x"></i>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">20 - blog</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header text-center">
+                    <i class="fas fa-dollar-sign fa-9x"></i>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">70.000 VNĐ</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">User</th>
+                <th scope="col">Mã Thẻ</th>
+                <th scope="col">Nhà Mạng</th>
+                <th scope="col">Ngày Nạp</th>
+                <th scope="col">status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i=1;i<=10;i++){ %>
+            <tr>
+                <th scope="row"><%-i%></th>
+                <td>Mark</td>
+                <td>12345678910</td>
+                <td>vietTel</td>
+                <td>19/6/2019</td>
+                <% if(i>3){ %>
+                <td><i class="fas fa-check" style="color: #26c115"></i></td>
+                <% }else{ %>
+                <td><i class="fas fa-genderless" style="color: #a51010"></i></td>
+                <% } %>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+</div>
+<div class="col-lg-2">
+    <div style="position:sticky">
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item" style="margin-bottom: 3px;">
+                <i class="fas fa-envelope-square" style="margin-right: 7px;"></i>
+                metroairplane@gmail.com
+            </li>
+            <li class="nav-item" style="margin-bottom: 3px;">
+                <i class="fas fa-phone-square" style="margin-right: 7px;"></i>
+                01238822596
+            </li>
+            <li class="nav-item" style="margin-bottom: 3px;">
+                <i class="fab fa-facebook-square" style="margin-right: 7px;"></i>
+                www.fb.com/toan.doan.161
+            </li>
+            <li class="nav-item" style="margin-bottom: 3px;">
+                <i class="fas fa-map-marker-alt" style="margin-right: 7px;"></i>
+                39 Hiệp Nhất, p.4, q.TB, TpHCM
+            </li>
+        </ul>
+    </div>
+</div>
+<%- include Dfooter -%>

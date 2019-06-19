@@ -21,3 +21,14 @@ app.use('/Farm',require('./routes/farm'));
 app.use('/sea',require('./routes/sea'));
 
 app.use('/writer',require('./routes/writer'));
+
+app.use('/admin',require('./routes/admin'));
+
+app.use('/blog',require('./routes/blog'));
+
+app.get('/about', (req, res) => {
+    res.render("home/about",{User:2});
+});
+app.get('/contract', (req, res) => {
+    res.render("home/contract",{User:2});
+});
