@@ -8,10 +8,14 @@ module.exports = {
   single: id => {
     return db.load(`select * from user where ID = ${id}`);
   },
-
+  //tìm kiếm trong database
   singleByUserName: userName => {
     return db.load(`select * from user where UName = '${userName}'`);
   },
+  singleByEmail: Email => {
+    return db.load(`select * from user where Email = '${Email}'`);
+  },
+
 
   add: entity => {
     return db.add('user', entity);

@@ -7,14 +7,26 @@
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <form>
+                <form action="/users/login" method="POST">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">UserName</label>
-                        <input type="text" class="form-control" placeholder="UserName...">
+                        <label for="UName">UserName</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            placeholder="UserName..."
+                            name="UName"
+                            id="UName"
+                            >
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="PWord">Password</label>
+                        <input 
+                            type="password" 
+                            class="form-control" 
+                            id="PWord" 
+                            placeholder="Password"
+                            name="PWord"
+                            >
                     </div>
                     <button type="submit" class="btn btn-primary">Login</button>
                 </form>
