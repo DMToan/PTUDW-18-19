@@ -16,7 +16,6 @@ module.exports = {
     return db.load(`select * from user where Email = '${Email}'`);
   },
 
-
   add: entity => {
     return db.add('user', entity);
   },

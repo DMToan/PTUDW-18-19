@@ -5,6 +5,7 @@ var passport = require('passport');
 var userModel = require('../models/user.model');
 var auth = require('../middlewares/auth');
 
+
 const router = express.Router();
 router.get('/', (req, res) => {
     res.render("home/login");
@@ -12,6 +13,13 @@ router.get('/', (req, res) => {
 router.get('/login', (req, res) => {
     res.render("home/login");
 });
+router.post('/login', (req, res, next) => {
+    passport.authenticate('local', {
+      successRedirect: '/',
+      failureRedirect: '/user/login'
+    })(req, res, next);
+  });
+
 router.get('/register', (req, res) => {
     res.render("home/register");
 });
@@ -48,7 +56,6 @@ router.post('/register', (req, res) => {
         SDT: req.body.SDT,
         Address: req.body.Address
         }
-        console.log(entity);
         userModel.singleByUserName(entity.UName).then(rows => {
             if (rows.length > 0){
                 errors.push({ msg: 'User name đã tồn tại' });
@@ -77,7 +84,13 @@ router.post('/register', (req, res) => {
     }
 });
 
-router.get('/profile', (req, res) => {
+router.get('/profile', auth, (req, res) => {
     res.render("home/profile");
+});
+
+router.get('/logout', (req, res) => {
+    req.logout();
+    req.flash('success_msg', 'You are logged out');
+    res.redirect('/users/login');
 });
 module.exports = router;
